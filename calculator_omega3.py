@@ -4,6 +4,8 @@
 import math
 import time
 import tkinter
+from tkinter import messagebox
+#possibly not needed, reearch needed
 
 #welcome
 print("Welcome to Calculator Ωmega!")
@@ -22,7 +24,8 @@ def overFlowCheck():
 
 #tkinter error message
 if number_count > 5:
-    messagebox.overFlowCheck("ERROR", overFlowCheck, [default])
+    messagebox.overFlowCheck("ERROR", overFlowCheck, [, default])
+    #it is either the comma behing or after the square brackets, research needed
 
 #welcome continued
 operation_choice = input("Please input required operator: (+, -, *, /, %, **) ")
