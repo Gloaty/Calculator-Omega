@@ -1,1 +1,1 @@
-# calculator_omega
+# omega_calculator
