@@ -1,2 +1,0 @@
-pyinstaller omega_calculator.py
-pyinstaller omega_calculator.spec
