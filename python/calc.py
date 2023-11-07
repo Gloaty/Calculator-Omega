@@ -10,10 +10,30 @@ def calc():
         x = input("Number A: ")
         y = input("Number B: ")
         z = x + y
-        print(x, "+", y, "=", z)
+        print(z)
         return
     def sub(x, y):
-        pass
+        x = input("Number A: ")
+        y = input("Number B: ")
+        z = x - y
+        print(z)
+    def mul(x, y):
+        x = input("Number A: ")
+        y = input("Number B: ")
+        z = x * y
+        print(z)
+    def div(x, y):
+        x = input("Number A: ")
+        y = input("Number B: ")
+        z = x / y
+        print(z)
+    def srqt(x):
+        x = input("Number: ")
+        if x <= 0:
+            print("Math ERROR")
+            pass
+        z = math.sqrt(x)
+        print(z)
     def main():
         op = input("Enter an operation: ")
         if op == "help":
@@ -27,3 +47,4 @@ def calc():
         return
     main()
     return
+main()
