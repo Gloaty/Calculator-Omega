@@ -5,7 +5,7 @@ import math
 global op, x, y, history
 
 #calculator
-def calc():
+class calc():
     def add(x, y):
         x = input("Number A: ")
         y = input("Number B: ")
@@ -46,19 +46,27 @@ def calc():
     def rndm(x, y):
         print("coin - Flip a coin")
         print("dice - Roll a dice")
-        prind("rndm - Random number between 1 and selected number. ")
-    def main():
-        op = input("Enter an operation: ")
-        if op == "help":
-            print("add - Adds two numbers together")
-            print("sub - Subtracts two numbers")
-            print("mul - Multiplies two numbers")
-            print("div - Divides two numbers")
-            print("sqrt - Finds the square root of a number")
-            print("rndm - Randomness Engine")
-        if op == "add":
-            add()
-        return
+        print("rndm - Random number between 1 and selected number. ")
+
+def main():
+    op = input("Enter an operation: ")
+    if op == "help":
+        print("add - Adds two numbers together")
+        print("sub - Subtracts two numbers")
+        print("mul - Multiplies two numbers")
+        print("div - Divides two numbers")
+        print("sqrt - Finds the square root of a number")
+        print("rndm - Randomness Engine")
+    if op == "add":
+        calc.add()
+    if op == "sub":
+        calc.sub()
+    if op == "mul":
+        calc.mul()
+    if op == "div":
+        calc.div()
+    if op == "sqrt":
+        calc.sqrt()
+    if op == "rndm":
+        calc.rndm()
     main()
-    return
-main()
