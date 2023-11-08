@@ -41,12 +41,17 @@ def calc():
             pass
         z = math.sqrt(x)
         print(z)
-        history = z
+        history = (x, " √ ", y, " = ", z)
         return
     def rndm(x, y):
         print("coin - Flip a coin")
         print("dice - Roll a dice")
-        prind("rndm - Random number between 1 and selected number. ")
+        print("rndm - Random number between 1 and selected number. ")
+        op = input("Enter an Operation: ")
+        if op == 
+    def rcll(z):
+        print("History: ")
+        print("z")
     def main():
         op = input("Enter an operation: ")
         if op == "help":
@@ -56,6 +61,7 @@ def calc():
             print("div - Divides two numbers")
             print("sqrt - Finds the square root of a number")
             print("rndm - Randomness Engine")
+            print("rcll - Recall History")
         if op == "add":
             add()
         return
