@@ -1,19 +1,17 @@
 #imports
 import math
-
-#global variables
-global op, x, y, history
+import time 
 
 #calculator
 class calc():
     def add(x, y):
-        x = input("Number A: ")
-        y = input("Number B: ")
+        x = int(input("Number A: "))
+        y = int(input("Number B: "))
         z = x + y
         print(z)
         history = z
         return
-    def sub(x, y):
+    def sub():
         x = input("Number A: ")
         y = input("Number B: ")
         z = x - y
@@ -41,14 +39,22 @@ class calc():
             pass
         z = math.sqrt(x)
         print(z)
-        history = (x, " √ ", y, " = ", z)
+        history = ("√", x, " = ", z)
         return
     def rndm(x, y):
         print("coin - Flip a coin")
         print("dice - Roll a dice")
         print("rndm - Random number between 1 and selected number. ")
+    def rcll(history):
+        print("Recalling history...")
+        time.sleep(1)
+        print(history)
+        return
 
 def main():
+    x = 0
+    y = 0
+    history = "null"
     op = input("Enter an operation: ")
     if op == "help":
         print("add - Adds two numbers together")
@@ -57,16 +63,20 @@ def main():
         print("div - Divides two numbers")
         print("sqrt - Finds the square root of a number")
         print("rndm - Randomness Engine")
+        print("rcll - Recall calculation history")
     if op == "add":
-        calc.add()
+        calc.add(x, y)
     if op == "sub":
-        calc.sub()
+        calc.sub(x, y)
     if op == "mul":
-        calc.mul()
+        calc.mul(x, y)
     if op == "div":
-        calc.div()
+        calc.div(x, y)
     if op == "sqrt":
-        calc.sqrt()
+        calc.sqrt(x)
     if op == "rndm":
-        calc.rndm()
+        calc.rndm(x, y)
+    if op == "rcll":
+        calc.rcll(history)
     main()
+main()
